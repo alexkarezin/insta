@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: be-ms-template
+spec:
+  selector:
+    app: be-ms-template
+  ports:
+  - protocol: TCP
+    port: 8199
+    targetPort: http

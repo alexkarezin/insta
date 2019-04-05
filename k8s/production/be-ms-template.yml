@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: be-ms-template
+ labels:
+   app: be-ms-template
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+      app: be-ms-template
+ template:
+   metadata:
+     labels:
+        app: be-ms-template
+   spec:
+     containers:
+     - name: be-ms-template
+       image: gcr.io/cloud-solutions-images/be-ms-template:1.0.0
+       ports:
+         - name: http
+           containerPort: 8199
