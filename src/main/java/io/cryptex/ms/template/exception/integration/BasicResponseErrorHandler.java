@@ -1,7 +1,7 @@
-package io.cryptex.ms.template.integration.handler;
+package io.cryptex.ms.template.exception.integration;
 
+import io.cryptex.ms.template.dto.ErrorInfoDto;
 import io.cryptex.ms.template.exception.InnerServiceException;
-import io.cryptex.ms.template.web.model.ErrorInfoDto;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;

@@ -29,10 +29,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -60,46 +60,6 @@
 
 <build>
     <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.6.2</version>
-            <configuration>
-                <generatedSourcesDirectory>${project.build.directory}/generated-sources</generatedSourcesDirectory>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>com.phoenixnap.oss</groupId>
-            <artifactId>springmvc-raml-plugin</artifactId>
-            <version>2.0.0</version>
-            <configuration>
-                <generateUnreferencedSchemas>true</generateUnreferencedSchemas>
-                <ramlPath>src/main/resources/static/api.raml</ramlPath>
-                <outputRelativePath>target/generated-sources</outputRelativePath>
-                <basePackage>io.cryptex.ms.template.web</basePackage>
-                <seperateMethodsByContentType>false</seperateMethodsByContentType>
-                <generationConfig>
-                    <includeAdditionalProperties>false</includeAdditionalProperties>
-                    <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
-                    <includeToString>false</includeToString>
-                    <includeJsr303Annotations>true</includeJsr303Annotations>
-                    <useLongIntegers>false</useLongIntegers>
-                </generationConfig>
-                <seperateMethodsByContentType>false</seperateMethodsByContentType>
-                <rule>com.phoenixnap.oss.ramlplugin.raml2code.rules.Spring4ControllerInterfaceRule</rule>
-                <ruleConfiguration>
-                </ruleConfiguration>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>generate-springmvc-endpoints</id>
-                    <phase>generate-sources</phase>
-                    <goals>
-                        <goal>generate-springmvc-endpoints</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>

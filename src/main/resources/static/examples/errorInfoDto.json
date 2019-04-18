@@ -1,7 +1,0 @@
-{
-  "status": 500,
-  "messages": ["Couldn't update balance: customerId = example@cryptex.io, iso = UAH, amount = 250365; with error message: ..."],
-  "debugMessage": "Issue with internal service",
-  "code": 50101,
-  "header": "Error header"
-}

@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public enum ExceptionCode {
 
+    NO_SUCH_VALUE_EXCEPTION(40001, "No such value exception", HttpStatus.BAD_REQUEST),
     INTERNAL_SERVICE_EXCEPTION(50101, "Issue with internal service", HttpStatus.INTERNAL_SERVER_ERROR),
     UNKNOWN_EXCEPTION(99999, "Unknown error", HttpStatus.INTERNAL_SERVER_ERROR);
 

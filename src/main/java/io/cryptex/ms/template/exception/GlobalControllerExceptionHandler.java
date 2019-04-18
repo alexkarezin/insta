@@ -1,7 +1,7 @@
 package io.cryptex.ms.template.exception;
 
-import io.cryptex.ms.template.integration.handler.RemotePassThroughException;
-import io.cryptex.ms.template.web.model.ErrorInfoDto;
+import io.cryptex.ms.template.dto.ErrorInfoDto;
+import io.cryptex.ms.template.exception.integration.RemotePassThroughException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
