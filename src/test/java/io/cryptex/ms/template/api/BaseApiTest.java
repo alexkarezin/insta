@@ -19,6 +19,7 @@ import java.time.Clock;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
+import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -57,5 +58,11 @@ public abstract class BaseApiTest {
         mockRestServiceServer.expect(ExpectedCount.manyTimes(), requestTo(uri))
                 .andExpect(method(HttpMethod.POST))
                 .andRespond(withStatus(HttpStatus.OK));
+    }
+    protected void mockResponseWithSuccess(MockRestServiceServer mockRestServiceServer, HttpMethod httpMethod, String uri, Object dataResponse) throws Exception {
+        String stringifiedDataResponse = objectMapper.writeValueAsString(dataResponse);
+        mockRestServiceServer.expect(ExpectedCount.manyTimes(), requestTo(uri))
+                .andExpect(method(httpMethod))
+                .andRespond(withSuccess(stringifiedDataResponse, MediaType.APPLICATION_JSON));
     }
 }

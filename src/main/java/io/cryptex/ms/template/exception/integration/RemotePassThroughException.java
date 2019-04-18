@@ -1,6 +1,6 @@
-package io.cryptex.ms.template.integration.handler;
+package io.cryptex.ms.template.exception.integration;
 
-import io.cryptex.ms.template.web.model.ErrorInfoDto;
+import io.cryptex.ms.template.dto.ErrorInfoDto;
 
 public class RemotePassThroughException extends RuntimeException {
 

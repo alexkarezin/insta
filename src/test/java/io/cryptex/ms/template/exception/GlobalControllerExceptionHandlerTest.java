@@ -1,6 +1,6 @@
 package io.cryptex.ms.template.exception;
 
-import io.cryptex.ms.template.web.model.ErrorInfoDto;
+import io.cryptex.ms.template.dto.ErrorInfoDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
